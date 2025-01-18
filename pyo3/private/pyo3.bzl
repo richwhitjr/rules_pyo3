@@ -113,6 +113,9 @@ py_pyo3_library = rule(
         "imports": attr.string_list(
             doc = "List of import directories to be added to the `PYTHONPATH`.",
         ),
+        "_allowlist_function_transition": attr.label(
+            default = "@bazel_tools//tools/allowlists/function_transition_allowlist"
+        ),
     },
     toolchains = [PYO3_TOOLCHAIN],
 )
