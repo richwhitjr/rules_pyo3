@@ -34,7 +34,8 @@ def _pyo3_toolchain_impl(ctx):
             if library.static_library:
                 libs.append(library.static_library)
 
-    implementation = PY_IMPLEMENTATIONS["cython"]
+    print(PY_IMPLEMENTATIONS)
+    implementation = PY_IMPLEMENTATIONS["cpython"]
 
     preferred_lib_exts = (".dylib", ".so", ".lib")
 
